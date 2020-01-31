@@ -1,0 +1,339 @@
+body{
+/*overflow: hidden;*/
+background-color: white;
+    margin:0;
+    padding:0;
+    overflow: hidden;}
+
+h1{
+    font-family: 'Ubuntu',
+    sans-serif;
+    color:#fff;
+    text-align: center;
+    margin: 0;
+}
+.background{
+    background-image: url("https://cdn.tutsplus.com/active/uploads/legacy/tuts/120_CS5decoTool/tutorial/images/-08.jpg");
+    background-repeat: repeat-x;
+    background-size: 90rem 40rem;
+   /*background-position-y: top;*/
+    /*background-size: 50% 50%;*/
+    /*overflow: hidden;*/
+    height :40em;
+    background-color: #020101;
+}
+.obstacles{
+    position: absolute;
+    background-position: center;
+    background-image: url("Img_05.png");
+    background-repeat:repeat-x;
+    height: 74px;
+    width: 171px;
+    transform:rotateX(-180deg) scale(-1.3);
+    z-index: 3;
+    margin: 32em;
+}
+
+@keyframes animate_obstacles {
+    from {
+        transform: translateX(50em) rotateX(-180deg) scale(-1);
+    }
+    to {
+        transform: translateX(-50em) rotateX(-180deg) scale(-1);
+    }
+}
+.move_obstacle{
+    animation: animate_obstacles 5s infinite linear;
+    animation-direction: revert;
+}
+
+
+#our-naruto {
+    /*margin: auto;*/
+    padding-top: 27em;
+    position: relative;
+  transform: scale(0.5);
+
+}
+.ninja {
+    width: 180px;
+    height: 200px;
+    position: absolute;
+    margin: 100px 10px;
+    top: 81%;
+    /*padding-bottom: 500px;*/
+    padding-top: 140px;
+    float: bottom;
+    /*transform: scale(.8);*/
+    /*transform: scale(0.7) rotateY(30deg);*/
+
+    z-index: 3;
+
+}
+.Walk {
+    margin: 20px;
+    font-size: 20px;
+}
+
+
+.ninja .n--head {
+    width: 140px;
+    height: 140px;
+    background: #000;
+    border-radius: 100%;
+    margin: -70px auto;
+    overflow: hidden;
+    transform: rotateY(210deg);
+
+}
+
+.ninja .n--head .n--eyes {
+    display: block;
+    width: 300px;
+    height: 300px;
+    background: #000;
+    border: 40px solid #f0d4a6;
+    border-radius: 100%;
+    margin: 35% -85%;
+}
+
+.ninja .n--head .n--eyes:before {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    border: 10px solid #000;
+    position: absolute;
+    margin: -49% 44%;
+    border-radius: 100%;
+}
+
+.ninja .n--head .n--eyes:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    position: absolute;
+    margin: -14% 60%;
+    border-radius: 100%;
+    box-shadow: 62px 0 0;
+}
+
+.ninja .n--head .n--ribbon {
+    position: absolute;
+    width: 10px;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 40px solid #020101;
+    margin: -10px 105px;
+    transform: rotate(45deg);
+}
+
+.ninja .n--head .n--ribbon:after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #2be7ff;
+    border-radius: 20000000%;
+    margin: -60px -10px;
+
+}
+
+.ninja .n--body {
+    width: 64%;
+    height: 50%;
+    background: #000;
+    margin: 60px auto;
+    transform: rotateY(210deg);
+    border-radius:1rem;
+}
+
+.ninja .n--body:after {
+    content: '';
+    display: block;
+    background: #333;
+    width: 100%;
+    height: 10px;
+    margin-top: 60%;
+    z-index: 1;
+    position: relative;
+}
+
+.ninja .n--body .n--weapon {
+    width: 130px;
+    height: 10px;
+    border-radius: 100px;
+    /*z-index: -5;*/
+    transform:rotate(-45deg);
+    position: absolute;
+    border: 1px solid #ccc;
+    margin: auto -32%;
+}
+
+.ninja .n--arm {
+    width: 50%;
+    height: 55%;
+    background: #000;
+    border-radius: 100px;
+    /*transform: scaleX(1.4) scaleY(0.8);*/
+}
+
+.ninja .n--arm:nth-child(2) {
+    margin: 0 -25%;
+}
+
+.ninja .n--arm:nth-child(3) {
+    margin: -48% 75%;
+}
+
+.ninja .n--leg {
+    width: 45%;
+    height: 75%;
+    float: left;
+    background: #000;
+    border-radius: 100px;
+    margin-top: 60px;
+}
+
+.ninja .n--body .n--leg:nth-child(4) {
+    margin-left: 0;
+}
+
+.ninja .n--body .n--leg:nth-child(5) {
+    margin-left: 10%;
+}
+
+.ninja.red .n--weapon {
+    background: #e74c3c;
+    border-color: #c0392b;
+    z-index: -2;
+}
+
+.ninja.red .n--body:after {
+    background-color: darkviolet;
+
+}
+
+/*Animation Part*/
+
+@keyframes movementF1
+{
+    from {
+        transform:rotate(-30deg);
+    }
+    to {
+        transform:rotate(30deg);
+    }
+}
+
+@keyframes movementF2
+{
+    from {
+        transform:rotate(30deg);
+    }
+    to {
+        transform:rotate(-30deg);
+    }}
+.B3{
+    transform-origin: 0 0;
+    animation: movementF1 0.3s infinite ease-in;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+
+}
+/*.n--arm:nth-child(3),.n--leg:nth-child(5)*/
+.B4{
+    transform-origin: 0 0;
+    animation: movementF2 0.3s infinite ease-in;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+.MoveForward{
+    animation: walk 1.2s steps(8)  infinite,
+    forward 5s linear infinite;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-direction: normal;
+
+}
+
+@keyframes walk{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: -70em;
+    }
+}
+@keyframes forward {
+    0% {
+        transform: translateX(-60em);
+    }
+    100% {
+        transform: translateX(140em);
+    }
+}
+
+
+@keyframes move_bg {
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: -7000000em;
+    }
+}
+.move_background{
+    animation: move_bg 290000s linear  infinite;
+
+}
+
+.up_jump{
+    animation: jump 1.2s ;
+    transform: scale(0.5);
+    animation-direction: normal;
+}
+@keyframes jump {
+    0%{
+        transform: translateY(0) scale(0.5);
+
+    }
+    50%{
+        transform:translateY(-8rem) scale(0.5);
+    }
+    100%{
+        transform: translateY(0) scale(0.5);
+    }
+}
+.bottom_background{
+    display: inline-block;
+    text-align: center;
+    padding: 0 30%;
+}
+button {
+    border-radius: 10px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: auto;
+}
+
+button:hover{
+    background-color: #611b06;
+    border: none;
+    color: #FFFFFF;
+    box-shadow: 0 5px 15px -5px #00000070;
+}

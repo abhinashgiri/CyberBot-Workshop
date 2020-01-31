@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+}
+.animate_title {
+    font-family: 'Open Sans',
+    sans-serif;
+    font-weight: 800;
+    font-size: 220%;
+    animation: changeColor 4s infinite;
+}
+@keyframes changeColor{
+    /*0%{*/
+    /*    color: yellow;*/
+    /*}50%{*/
+    /*    color: yellowgreen;*/
+    /*}75%{*/
+    /*    color: green;*/
+    /*}100%{*/
+    /*    color:lightgreen;*/
+    /*}*/
+    0% { opacity: 0.2%;
+        text-shadow: 0px 0px 100px rgba(11,124,199,0.5);
+    }
+    20% { opacity: 0.4; text-shadow: 0px 0px 100px rgba(168,11,199,0.5);}
+    40% { opacity: 0.6;text-shadow: 0px 0px 100px rgba(11,199,96,0.5);}
+    60% {opacity: 0.8; text-shadow: 0px 0px 100px rgba(199,11,11,0.5);}
+    80% { opacity: 1;text-shadow: 0px 0px 100px rgba(199,96,11,0.5);}
+}
+
+h2,h3{
+    font-family: 'Ubuntu',
+    sans-serif;
+    font-size: 150%;
+}
+
+.introduction{
+    padding:12% 6.25em;
+    background-image: url("d.jpeg");
+    background-repeat: repeat-x;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+    transform: scale(1);
+    overflow: hidden;
+}
+.nav-links{
+    padding: 1%;
+    background-color: #e74c3c;
+    width: 100%;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    z-index: 1;
+    clip-path:circle(0px at 50% -2%);
+    transition: all 1s ease-out;
+}
+.nav-links h1{
+    margin: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    padding: 2%;
+    /*transition: all 0.5 ease 0.2;*/
+}
+.nav-links h3 {
+    width: 70%;
+    margin:30px;
+    padding-left: 2%;
+}
+
+.nav-links.open{
+    clip-path: circle(3000px at 50% -2%);
+}
+.title{
+    font-size: 47px;
+}
+
+ .ninja {
+    width: 180px;
+    height: 200px;
+    position: absolute;
+    margin: 100px 10px;
+    top: 80%;
+    justify-content: center;
+    right: 45%;
+    float: left;
+    z-index: 1;
+}
+
+.ninja .n--head {
+    width: 140px;
+    height: 140px;
+    background: black;
+    border-radius: 100%;
+    margin: -70px auto;
+    overflow: hidden;
+}
+
+
+.ninja .n--head .n--eyes {
+    display: block;
+    width: 300px;
+    height: 300px;
+    background: black;
+    border: 40px solid #f0d4a6;
+    border-radius: 100%;
+    margin: 35% -85%;
+    z-index: 1;
+}
+
+.ninja .n--head .n--eyes:before {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    border: 10px solid #000;
+    position: absolute;
+    margin: -49% 44%;
+    border-radius: 100%;
+}
+
+
+.ninja .n--head .n--eyes:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    position: absolute;
+    margin: -14% 60%;
+    border-radius: 100%;
+    box-shadow: 62px 0px 0;
+}
+
+
+.ninja .n--body {
+    width: 64%;
+    height: 50%;
+    background: black;
+    margin: 60px auto;
+}
+
+.ninja .n--body:after {
+    content: '';
+    display: block;
+    background: #e74c3c;
+    width: 100%;
+    height: 10px;
+    margin-top: 60%;
+    z-index: 1;
+    position: relative;
+}
+
+.ninja .n--body .n--weapon {
+    width: 130px;
+    height: 10px;
+    border-radius: 100px;
+    z-index: -1;
+    transform: rotate(45deg);
+    position: absolute;
+    border: 1px solid #ccc;
+    margin: auto -32%;
+}
+
+.ninja .n--arm {
+    width: 50%;
+    height: 55%;
+    background: #000000;
+    border-radius: 100px;
+}
+
+.ninja .n--arm:nth-child(2) {
+    margin: 0 -25%
+}
+
+.ninja .n--arm:nth-child(3) {
+    margin: -48% 75%
+}
+
+.ninja .n--leg {
+    width: 45%;
+    height: 75%;
+    float: left;
+    background: #000;
+    border-radius: 100px;
+    margin-top: 60px;
+}
+
+.ninja .n--body .n--leg:nth-child(4) {
+    margin-left: 0px;
+}
+
+.ninja .n--body .n--leg:nth-child(5) {
+    margin-left: 10%
+}
+
+.ninja.red .n--weapon {
+    background: #e74c3c;
+    border-color: #c0392b;
+}
+
+.space{
+    padding:15% 0;
+
+}
+
+.play{ margin:0;
+    background-color: #e74c3c;
+    text-align: center;
+    padding:7%;
+    color: #fff;
+}
+.play h1{
+    font-family: 'Ubuntu',
+    sans-serif;
+    font-weight: 800;
+    font-size: 220%;
+    color:#fff;
+    padding-bottom: 4%;
+}
+
+.playText{
+    padding: 40px;
+}
+
+.tecno_badge{
+    position: absolute;
+    background-image: url("tecnoesis.png");
+    height: 14em;
+    width: 10em;
+    top :92%;
+    right: 44.5%;
+    background-repeat: no-repeat;
+    transform: scale(.19);
+    z-index: 4;
+}
+@keyframes glow{
+    0%{
+        transform: translateX(-1px) scale(.16);
+    }
+
+    100%{
+        transform: scale(.19);
+    }
+}
+.heart{
+    animation: glow 1s steps(2) infinite;
+}
+
+.connect{
+    text-align: center;
+    padding:4%;
+}
+
+.connect h1{
+    font-family: 'Ubuntu',
+    sans-serif;
+    font-weight: 800;
+    font-size: 220%;
+    color:#e74c3c;
+    padding-bottom: 4%;
+}
+
+
+.middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.butn {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #e74c3c;
+    overflow: hidden;
+    position: relative;
+    transform: scale(.7);
+}
+
+.butn i {
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+}
+
+.butn:hover i {
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+.butn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #e74c3c;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.butn:hover::before {
+    animation: ani 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes ani {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
+.butn1 {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: transparent;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    border: 2px white solid;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    transform: scale(.7);
+    z-index: 2;
+}
+
+.butn1 i {
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+}
+
+.butn1:hover i {
+    transform: scale(1.3);
+    color: #6f5a7e;
+}
+
+.butn1::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #fff;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.butn1:hover::before {
+    animation: ani 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+.butn2 {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    border: 2px white solid;
+    box-shadow: 0 5px 15px -5px #00000070;
+    text-align: center;
+    color: #e74c3c;
+    overflow: hidden;
+    position: relative;
+    transform: scale(.7);
+    z-index: 2;
+}
+
+.butn2 i {
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+}
+
+.butn2:hover i {
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+.butn2::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #e74c3c;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.butn2:hover::before {
+    animation: ani 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+#bot:hover #hand2{
+    transform: scaleX(1.8);
+    animation: movementF2 2s infinite ease-in, alternate;
+
+}
+/*********************************************************************************************/
+/*Here tried to give blinking effect on hover but couldn't because of lack of time */
+
+/*#bot:hover .ninja .n--head .n--eyes:after*/
+/*{*/
+/*    animation: eye_blink ,eye_blink,eye_blink,eye_blink ,eye_blink,eye_blink,eye_blink,eye_blink,eye_blink,eye_blink,eye_blink;*/
+/*    !*animation-delay: 2s,2s,2s,2s,2s,2s,2s,2s,2s,2s,2s;*!*/
+/*    animation-duration: 1.5s;*/
+/*    animation-iteration-count: 100;*/
+/*}*/
+
+/*@keyframes eye_blink {*/
+/*0%{background: #020101;*/
+/*border-color: #020101;*/
+/*box-shadow: 62px 0 0;*/
+/*}*/
+/*    50%{background: navajowhite;*/
+/*        border-color: white;*/
+/*        box-shadow: 62px 0px navajowhite;*/
+/*    }*/
+/*100%{*/
+/*    background: black;*/
+/*    border-color: navajowhite;*/
+/*    box-shadow: 62px 0px black;*/
+/*}*/
+
+/*********************************************************************************************/
+
+@keyframes movementF2 {
+    0% {
+        transform: rotate(0deg) scaleX(1.8) ;
+    }
+    50% {
+        transform: rotate(50deg) scaleX(1.8);
+    }
+    100% {
+        transform: rotate(0deg) scaleX(1.8);
+
+    }
+}
